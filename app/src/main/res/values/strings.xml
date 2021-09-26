@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Space Heist</string>
+    <string name="space_heist">SPACE HEIST</string>
+    <string name="start">START</string>
+    <string name="help">HELP</string>
+    <string name="exit">EXIT</string>
+</resources>
