@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SpaceHeist">
         <activity
+            android:name=".QuestionsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".QuizStart_Activity"
+            android:exported="true" />
+        <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
@@ -23,15 +29,16 @@
             android:exported="true" />
         <activity
             android:name=".StartActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            />
-        <activity android:name=".ResultActivity"
-            android:exported="true"/>
-        <activity android:name=".ShopActivity"
-            android:exported="true"/>
+            android:exported="true" />
+        <activity
+            android:name=".ResultActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ShopActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

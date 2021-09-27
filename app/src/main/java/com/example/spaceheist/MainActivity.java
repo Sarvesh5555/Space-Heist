@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     private int diamondSpeed;
     private int enemy1Speed;
     private int enemy2Speed;
-    private int score = 0;
+    public int score = 0;
 
     private Handler handler = new Handler();
     private Timer timer = new Timer();
@@ -297,6 +297,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
             intent.putExtra("SCORE",score);
             startActivity(intent);
+            Intent intent1 = new Intent(getApplicationContext(),QuizStart_Activity.class);
             MainActivity.this.finish();
 
         }
@@ -317,7 +318,7 @@ public class MainActivity extends AppCompatActivity {
             editor.putInt("COINS", coins);
             editor.commit();
             MainActivity.this.finish();
-            Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+            Intent intent = new Intent(getApplicationContext(), QuizStart_Activity.class);
             intent.putExtra("SCORE",score);
             startActivity(intent);
             MainActivity.this.finish();
