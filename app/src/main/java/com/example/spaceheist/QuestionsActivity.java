@@ -44,7 +44,7 @@ public class QuestionsActivity extends AppCompatActivity {
             "Saturn","Jupiter","Neptune","Uranus"
     };
     int flag=0;
-    public static int marks=0,correct=0,wrong=0;
+    int gamescore = getIntent().getIntExtra("SCORE", 0);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,18 +83,17 @@ public class QuestionsActivity extends AppCompatActivity {
                 String ansText = uans.getText().toString();
 //                Toast.makeText(getApplicationContext(), ansText, Toast.LENGTH_SHORT).show();
                 if(ansText.equals(answers[flag])) {
-                    correct++;
+                    QuestionsActivity.score++;
                     Toast.makeText(getApplicationContext(), "Correct", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    wrong++;
                     Toast.makeText(getApplicationContext(), "Wrong", Toast.LENGTH_SHORT).show();
                 }
 
                 flag++;
 
                 if (score != null)
-                    score.setText(""+correct);
+                    score.setText(""+ QuestionsActivity.score);
 
                 if(flag<questions.length)
                 {
@@ -106,7 +105,6 @@ public class QuestionsActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    marks=correct;
                     Intent in = new Intent(getApplicationContext(),ResultActivity.class);
                     startActivity(in);
                 }
@@ -117,7 +115,7 @@ public class QuestionsActivity extends AppCompatActivity {
         quitbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(),ResultActivity.class);
+                Intent intent=new Intent(getApplicationContext(),StartActivity.class);
                 startActivity(intent);
             }
         });

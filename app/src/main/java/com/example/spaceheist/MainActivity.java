@@ -293,12 +293,10 @@ public class MainActivity extends AppCompatActivity {
             SharedPreferences.Editor editor = settings.edit();
             editor.putInt("COINS", coins);
             editor.commit();
-            MainActivity.this.finish();
-            Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+
+            Intent intent = new Intent(getApplicationContext(), QuizStart_Activity.class);
             intent.putExtra("SCORE",score);
             startActivity(intent);
-            Intent intent1 = new Intent(getApplicationContext(),QuizStart_Activity.class);
-            MainActivity.this.finish();
 
         }
 
@@ -317,11 +315,10 @@ public class MainActivity extends AppCompatActivity {
             SharedPreferences.Editor editor = settings.edit();
             editor.putInt("COINS", coins);
             editor.commit();
-            MainActivity.this.finish();
+
             Intent intent = new Intent(getApplicationContext(), QuizStart_Activity.class);
             intent.putExtra("SCORE",score);
             startActivity(intent);
-            MainActivity.this.finish();
 
         }
     }
