@@ -109,4 +109,8 @@ public class StartActivity extends AppCompatActivity {
 
     }
 
+    public void startquiz(View view) {
+        Intent in = new Intent(this,QuestionsActivity.class);
+        startActivity(in);
+    }
 }

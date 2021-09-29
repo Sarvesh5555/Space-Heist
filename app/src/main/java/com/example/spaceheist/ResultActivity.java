@@ -25,6 +25,7 @@ public class ResultActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+
         TextView scoreLabel = (TextView) findViewById(R.id.scoreLabel);
         TextView hightScoreLabel = (TextView) findViewById(R.id.hightScoreLabel);
         TextView gamesPlayedLabel = (TextView) findViewById(R.id.gamesPlayedLabel);
@@ -33,6 +34,7 @@ public class ResultActivity extends AppCompatActivity {
 
         int score = getIntent().getIntExtra("SCORE", 0);
         scoreLabel.setText(""+score);
+
 
         if (score < 50){
             medal.setImageResource(R.drawable.bronze);
@@ -81,5 +83,10 @@ public class ResultActivity extends AppCompatActivity {
             }
         }
         return  super.dispatchKeyEvent(event);
+    }
+
+    public void quizscreenstart(View view) {
+        Intent intent = new Intent(this, QuestionsActivity.class);
+        startActivity(intent);
     }
 }

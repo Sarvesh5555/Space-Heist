@@ -293,8 +293,7 @@ public class MainActivity extends AppCompatActivity {
             SharedPreferences.Editor editor = settings.edit();
             editor.putInt("COINS", coins);
             editor.commit();
-
-            Intent intent = new Intent(getApplicationContext(), QuizStart_Activity.class);
+            Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
             intent.putExtra("SCORE",score);
             startActivity(intent);
 
@@ -316,7 +315,7 @@ public class MainActivity extends AppCompatActivity {
             editor.putInt("COINS", coins);
             editor.commit();
 
-            Intent intent = new Intent(getApplicationContext(), QuizStart_Activity.class);
+            Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
             intent.putExtra("SCORE",score);
             startActivity(intent);
 

@@ -3,7 +3,6 @@ package com.example.spaceheist;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -44,15 +43,14 @@ public class QuestionsActivity extends AppCompatActivity {
             "Saturn","Jupiter","Neptune","Uranus"
     };
     int flag=0;
-    int gamescore = getIntent().getIntExtra("SCORE", 0);
+    public static int marks=0,correct=0,wrong=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         final TextView score = (TextView)findViewById(R.id.textView4);
+
 
         submitbutton=(Button)findViewById(R.id.button3);
         quitbutton=(Button)findViewById(R.id.buttonquit);
@@ -83,17 +81,18 @@ public class QuestionsActivity extends AppCompatActivity {
                 String ansText = uans.getText().toString();
 //                Toast.makeText(getApplicationContext(), ansText, Toast.LENGTH_SHORT).show();
                 if(ansText.equals(answers[flag])) {
-                    QuestionsActivity.score++;
+                    correct++;
                     Toast.makeText(getApplicationContext(), "Correct", Toast.LENGTH_SHORT).show();
                 }
                 else {
+                    wrong++;
                     Toast.makeText(getApplicationContext(), "Wrong", Toast.LENGTH_SHORT).show();
                 }
 
                 flag++;
 
                 if (score != null)
-                    score.setText(""+ QuestionsActivity.score);
+                    score.setText(""+correct);
 
                 if(flag<questions.length)
                 {
@@ -105,7 +104,8 @@ public class QuestionsActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    Intent in = new Intent(getApplicationContext(),ResultActivity.class);
+                    marks=correct;
+                    Intent in = new Intent(getApplicationContext(),ActivityQuizResult.class);
                     startActivity(in);
                 }
                 radio_g.clearCheck();
@@ -115,7 +115,7 @@ public class QuestionsActivity extends AppCompatActivity {
         quitbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(),StartActivity.class);
+                Intent intent=new Intent(getApplicationContext(),ActivityQuizResult.class);
                 startActivity(intent);
             }
         });
