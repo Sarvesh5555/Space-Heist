@@ -19,7 +19,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash_screen);
-        MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(),R.raw.mixkit);
+        MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.mixkit);
         mediaPlayer.start();
         new Timer().schedule(new TimerTask() {
             @Override

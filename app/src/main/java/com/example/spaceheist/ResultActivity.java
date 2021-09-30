@@ -89,4 +89,9 @@ public class ResultActivity extends AppCompatActivity {
         Intent intent = new Intent(this, QuestionsActivity.class);
         startActivity(intent);
     }
+
+    public void exittomain(View view) {
+        Intent intent = new Intent(this,StartActivity.class);
+        startActivity(intent);
+    }
 }

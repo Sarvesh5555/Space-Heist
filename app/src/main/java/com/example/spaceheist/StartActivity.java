@@ -23,7 +23,7 @@ public class StartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-        MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(),R.raw.space);
+        MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.space);
         mediaPlayer.start();
         setContentView(R.layout.activity_start);
 

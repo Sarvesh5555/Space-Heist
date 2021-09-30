@@ -46,4 +46,8 @@ public class ActivityQuizResult extends AppCompatActivity {
             });
         }
 
+    public void backtostart(View view) {
+            Intent intent = new Intent(this,StartActivity.class);
+            startActivity(intent);
     }
+}
