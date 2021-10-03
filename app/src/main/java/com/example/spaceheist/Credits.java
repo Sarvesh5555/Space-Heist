@@ -6,17 +6,16 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class CreditsAcitivty extends AppCompatActivity {
+public class Credits extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_credits_acitivty);
+        setContentView(R.layout.activity_credits);
     }
 
-    public void backcreditis(View view) {
-        Intent intent = new Intent(this,StartActivity.class);
+    public void backcredits(View view) {
+        Intent intent = new Intent(this,help.class);
         startActivity(intent);
-
     }
 }

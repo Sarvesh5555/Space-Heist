@@ -20,7 +20,7 @@ public class help extends AppCompatActivity {
     }
 
     public void credits(View view) {
-        Intent in = new Intent(this,CreditsAcitivty.class);
-        startActivity(in);
+        Intent intent = new Intent(this,Credits.class);
+        startActivity(intent);
     }
 }

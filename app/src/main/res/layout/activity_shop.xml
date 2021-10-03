@@ -23,19 +23,19 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
+        android:text="100"
         android:textColor="@color/white"
         android:textSize="30dp"
-        android:text="100"
         android:textStyle="bold" />
 
     <ImageView
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        android:src="@drawable/diamond"
-        android:layout_marginTop="103dp"
+        android:layout_width="30sp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="5dp"
+        android:layout_marginTop="103dp"
         android:layout_toRightOf="@+id/tv_coins"
-        android:layout_centerHorizontal="true"/>
+        android:src="@drawable/diamond" />
 
     <ImageButton
         android:id="@+id/home"

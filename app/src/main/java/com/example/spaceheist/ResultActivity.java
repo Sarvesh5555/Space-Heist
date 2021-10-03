@@ -93,5 +93,7 @@ public class ResultActivity extends AppCompatActivity {
     public void exittomain(View view) {
         Intent intent = new Intent(this,StartActivity.class);
         startActivity(intent);
+        ResultActivity.this.finish();
+
     }
 }

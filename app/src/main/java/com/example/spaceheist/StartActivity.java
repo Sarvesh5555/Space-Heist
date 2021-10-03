@@ -71,7 +71,7 @@ public class StartActivity extends AppCompatActivity {
                                 intent.setType("text/plain");
                                 intent.putExtra(Intent.EXTRA_SUBJECT, "Space Heist");
                                 String sAux = "\n Follow Us On \n\n";
-                                sAux = sAux+ "https://www.youtube.com/c/TamilCyberSec\n\n";
+                                sAux = sAux+ "https://www.youtube.com/c/TamilCyberSec\n\nhttps://t.me/spaceheist\n\n";
                                 intent.putExtra(Intent.EXTRA_TEXT, sAux);
                                 startActivity(Intent.createChooser(intent, "Share"));
                             }

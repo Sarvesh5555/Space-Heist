@@ -40,7 +40,7 @@ public class ActivityQuizResult extends AppCompatActivity {
             btnRestart.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent in = new Intent(getApplicationContext(),MainActivity.class);
+                    Intent in = new Intent(getApplicationContext(),QuestionsActivity.class);
                     startActivity(in);
                 }
             });
@@ -49,5 +49,7 @@ public class ActivityQuizResult extends AppCompatActivity {
     public void backtostart(View view) {
             Intent intent = new Intent(this,StartActivity.class);
             startActivity(intent);
+            ActivityQuizResult.this.finish();
+
     }
 }

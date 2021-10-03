@@ -296,6 +296,7 @@ public class MainActivity extends AppCompatActivity {
             editor.commit();
             Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
             intent.putExtra("SCORE",score);
+            MainActivity.this.finish();
             startActivity(intent);
 
         }
@@ -318,7 +319,10 @@ public class MainActivity extends AppCompatActivity {
 
             Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
             intent.putExtra("SCORE",score);
+            MainActivity.this.finish();
             startActivity(intent);
+
+
 
         }
     }
